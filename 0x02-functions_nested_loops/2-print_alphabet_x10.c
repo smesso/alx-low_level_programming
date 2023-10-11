@@ -18,5 +18,6 @@ letter++;
 }
 }
 _putchar('\n');
+count++;
 }
 
