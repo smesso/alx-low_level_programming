@@ -2,22 +2,22 @@
 
 /**
  * print_alphabet_x10 - Prints the lowercase alphabet ten times
- * followed by a new line.
+ *                     followed by a new line after each line.
  */
 void print_alphabet_x10(void)
 {
-char letter;
-int count;
-for (count = 0; count < 10; count++)
-{
-letter = 'a';
-while (letter <= 'z')
-{
-_putchar(letter);
-letter++;
-}
-}
-_putchar('\n');
-count++;
+    char letter;
+    int count;
+
+    for (count = 0; count < 10; count++)
+    {
+        letter = 'a';
+        while (letter <= 'z')
+        {
+            _putchar(letter);
+            letter++;
+        }
+        _putchar('\n'); // Add a newline after each line of the alphabet
+    }
 }
 
