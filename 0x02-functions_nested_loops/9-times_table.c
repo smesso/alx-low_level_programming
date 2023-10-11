@@ -15,19 +15,21 @@ result = row * col;
 
 if (col != 0)
 {
-_putchar(',');
-_putchar(' ');
+printf(", ");
 }
 
 if (result < 10)
-_putchar(' ');
-
-if (result >= 10)
-_putchar(result / 10 + '0');
-
-_putchar(result % 10 + '0');
+{
+printf("  ");
 }
-_putchar('\n');
+else
+{
+printf(" ");
+}
+
+printf("%d", result);
+}
+printf("\n");
 }
 }
 
