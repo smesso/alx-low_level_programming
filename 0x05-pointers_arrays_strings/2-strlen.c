@@ -18,5 +18,5 @@ length++;
 }
 }
 
-return length;
+return (length);
 }
