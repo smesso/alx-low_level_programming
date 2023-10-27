@@ -7,20 +7,24 @@
  */
 int is_prime_number(int n)
 {
-	int i;
-
-	/* If n is less than or equal to 1, it's not a prime number */
 	if (n <= 1)
 		return (0);
 
-	/* Check for divisibility from 2 to n/2 */
-	for (i = 2; i <= n / 2; ++i)
-	{
-		/* If n is divisible by i, it's not a prime number */
-		if (n % i == 0)
-			return (0);
-	}
+	return (is_prime_recursive(n, 2));
+}
 
-	/* If n is not divisible by any number in the range, it's a prime number */
-	return (1);
+/**
+ * is_prime_recursive - Helper function for recursive prime check.
+ * @n: The number to be checked for primality.
+ * @divisor: The current divisor to check.
+ *
+ * Return: 1 if n is prime, 0 if it is not.
+ */
+int is_prime_recursive(int n, int divisor)
+{
+	if (n == divisor)
+		return (1);
+	if (n % divisor == 0)
+		return (0);
+	return (is_prime_recursive(n, divisor + 1));
 }
