@@ -1,45 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 /**
- * main - program that adds positive numbers.
- * @argc: number of arguments
- * @argv: array with the arguments
+ * check_num - checks if a string contains only digits
+ * @str: input string
  *
- * Return: (0) on success, (1) on error
- **/
+ * Return: 1 if all characters are digits, 0 otherwise
+ */
+int check_num(char *str)
+{
+unsigned int count = 0;
 
-int main(int argc, char *argv[])
+while (count < strlen(str))
 {
-int i, sum = 0;
-char c[] = "Error";
-
-if (argc > 1)
+if (!isdigit(str[count]))
 {
-for (i = 1; i < argc; i++)
-{
-char *find_letter = argv[i];
-
-while (*find_letter != '\0')
-{
-if (*find_letter < '0' || *find_letter > '9')
-{
-printf("%s\n", c);
+return (0);
+}
+count++;
+}
 return (1);
 }
-find_letter++;
-}
 
-int num = atoi(argv[i]);
-sum += num;
-}
+/**
+ * main - Sums positive numbers passed as arguments
+ * @argc: Number of arguments
+ * @argv: Array of arguments
+ *
+ * Return: 0 on success, 1 on error
+ */
+int main(int argc, char *argv[])
+{
+int count;
+int str_to_int;
+int sum = 0;
 
-printf("%d\n", sum);
+count = 1;
+
+while (count < argc)
+{
+if (check_num(argv[count]))
+{
+str_to_int = atoi(argv[count]);
+sum += str_to_int;
 }
 else
 {
-printf("%d\n", 0);
+printf("Error\n");
+return (1);
 }
+
+count++;
+}
+
+printf("%d\n", sum);
 
 return (0);
 }
