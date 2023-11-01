@@ -6,7 +6,9 @@
  * @argc: Number of arguments
  * @argv: Array of arguments
  *
- * Return: 0 if successful, 1 if there are not enough arguments or invalid input.
+ * Return: 0 if successful, 
+ * 1 if there are not enough arguments 
+ * or invalid input.
  **/
 int main(int argc, char *argv[])
 {
