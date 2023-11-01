@@ -1,36 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * _atoi - converts a string to an integer
- * @s: string to be converted		
- *		
- * Return: the int converted from the string
- */
-
-int main(int argc, char *argv[]) 
+ * main - Multiplies two numbers.
+ * @argc: Number of arguments
+ * @argv: Array of arguments
+ *
+ * Return: 0 if successful, 1 if there are not enough arguments or invalid input.
+ **/
+int main(int argc, char *argv[])
 {
-if (argc != 3) {
-fprintf(stderr, "Error: Please provide exactly two arguments.\n");
+int mult = 0;
+
+if (argc != 3)
+{
+printf("Error\n");
 return (1);
 }
 
-int num1 = atoi(argv[1]);
-int num2 = atoi(argv[2]);
-
-if (num1 == 0 && *argv[1] != '0') 
-{
-fprintf(stderr, "Error: Invalid input for num1.\n");
-return (1);
-}
-
-if (num2 == 0 && *argv[2] != '0') 
-{
-fprintf(stderr, "Error: Invalid input for num2.\n");
-return (1);
-}
-
-int result = num1 * num2;
-printf("%d\n", result);
+mult = atoi(argv[1]) * atoi(argv[2]);
+printf("%d\n", mult);
 
 return (0);
 }
