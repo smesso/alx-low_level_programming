@@ -13,5 +13,5 @@ if (block == NULL)
 {
 exit(98);
 }
-return block;
+return (block);
 }
