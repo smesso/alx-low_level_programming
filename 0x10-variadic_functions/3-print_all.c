@@ -41,7 +41,6 @@ str = "(nil)";
 printf("%s%s", str, sep);
 break;
 }
-n++;
 }
 
 printf("\n");
