@@ -9,7 +9,7 @@
 void print_all(const char * const format, ...)
 {
 va_list valist;
-int i = 0;
+int n = 0, i = 0;
 char *sep = ", ";
 char *str;
 
@@ -41,6 +41,7 @@ str = "(nil)";
 printf("%s%s", str, sep);
 break;
 }
+n++;
 }
 
 printf("\n");
