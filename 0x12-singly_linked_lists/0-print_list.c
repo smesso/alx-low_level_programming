@@ -20,7 +20,7 @@ if (current->str == NULL)
 {
 printf("[0] (nil)\n");
 }
-else 
+else
 {
 printf("[%d] %s\n", current->len, current->str);
 }
