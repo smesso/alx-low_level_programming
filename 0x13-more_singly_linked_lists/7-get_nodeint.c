@@ -13,7 +13,7 @@ listint_t *cursor = NULL;
 unsigned int i = 0;
 
 while (head != NULL)
-}
+{
 if (i <= index)
 {
 if (i == index)
